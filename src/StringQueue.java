@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 
 public interface StringQueue<T> {
-    /**
+    	/**
 	 * @return true if the queue is empty
 	 */
 	public boolean isEmpty();
