@@ -155,6 +155,7 @@ public class Thiseas {
 
 			// Same steps.
 			else if ((stack.peek().row - 1) >= 0 && buffer[stack.peek().row - 1][stack.peek().column] == '0') {
+
 				System.out.println("Move up");
 				int x = stack.peek().row - 1;
 				stack.push(new Position(x, stack.peek().column));
@@ -164,6 +165,7 @@ public class Thiseas {
 			// Same steps.
 			else if ((stack.peek().row + 1) <= (buffer.length - 1)
 					&& buffer[stack.peek().row + 1][stack.peek().column] == '0') {
+
 				System.out.println("Move down");
 				int x = stack.peek().row + 1;
 				stack.push(new Position(x, stack.peek().column));
@@ -198,14 +200,18 @@ public class Thiseas {
 			// Checking if we found an exit.
 			if (stack.peek().row == buffer.length - 1 || stack.peek().column == buffer[0].length - 1
 					|| stack.peek().row == 0 || stack.peek().column == 0) {
+
 				System.out.println("CONGRATULATIONS,YOU FOUND A WAY OUT! EXIT OF THE LABYRINTH IS:(" + stack.peek().row
 						+ "," + stack.peek().column + ")");
+
 				break;
 			}
 		}
 	}
 
 	/**
+	 * Checks if the maze has the desired format.
+	 * 
 	 * @param input        An input object that will scan through the txt file
 	 * @param line_counter The total rows of the maze.
 	 * @throws Exception Throws an Exception if the maze is not in correct form.
@@ -214,70 +220,79 @@ public class Thiseas {
 	private static void check_maze(Scanner input, int line_counter) throws Exception {
 
 		String character = "";
+
+		// Counts all characters in the txt file
 		int size_counter = 0;
-		int rows = 0; // grammes
-		int columns = 0; // sthles
-		int e_x = 0; // x tou E
-		int e_y = 0; // y tou E
-		int E_counter = 0; // Counter gia to poses fores sunantame to E ston pinaka
+		int rows = 0;
+		int columns = 0;
+		int e_x = 0;
+		int e_y = 0;
+
+		// Counts how many 'E' characters exist
+		int E_counter = 0;
 
 		try {
+
 			while (input.hasNext()) {
 
-				// krataw to megethos twn xarakthrwn tou text arxeiou
 				size_counter++;
 
-				// arxikopoiw ta rows,columns kai e_x, e_y
-				// an den borei na ginei conversion ap to String se int
-				// dhladh exw mia timh pou den einai arithmos sto text arxeio
-				// vgainei exception
-
-				if (size_counter == 1) {
-					rows = Integer.parseInt(input.next());
-
-				} else if (size_counter == 2) {
-					columns = Integer.parseInt(input.next());
-				} else if (size_counter == 3) {
-					e_x = Integer.parseInt(input.next());
-				} else if (size_counter == 4) {
-					e_y = Integer.parseInt(input.next());
-				}
-
-				else {
-
-					character = input.next();
-
-					// metraw poses fores vriskw E ston pinaka
-					if (character.charAt(0) == 'E') {
-
-						E_counter++;
-					} else {
-						// an sto text arxeio periexetai kati pou den einai 0 h 1 tote vgale Exception
-						if (character.charAt(0) != '0' && character.charAt(0) != '1' && size_counter > 4) {
-
-							throw new Exception();
-
-						}
+				/**
+				 * If we are at the first 4 characters, we check the dimensions of the maze and
+				 * the coordinates of E. If for example, a String value instead of an int value
+				 * is found, an Exception will be thrown.
+				 */
+				switch (size_counter) {
+					case 1: {
+						rows = Integer.parseInt(input.next());
+						break;
 					}
 
+					case 2: {
+						columns = Integer.parseInt(input.next());
+						break;
+					}
+
+					case 3: {
+						e_x = Integer.parseInt(input.next());
+						break;
+					}
+
+					case 4: {
+						e_y = Integer.parseInt(input.next());
+						break;
+					}
+
+					default: {
+						character = input.next();
+
+						if (character.charAt(0) == 'E') {
+							E_counter++;
+						}
+
+						else {
+							/**
+							 * If the text file contains a character that is not a 1 or 0 then Throw an
+							 * Exception
+							 */
+							if (character.charAt(0) != '0' && character.charAt(0) != '1') {
+								throw new Exception();
+							}
+						}
+					}
 				}
 			}
-
-			// afairw 4 gia na xw mono to megethos tou pinaka
-			// xarakthrwn pou thelw na ftiaksw
+			/**
+			 * removing 4 characters (dimensions and coordinates of E), so we keep only the
+			 * size of the characters of the maze
+			 */
 			size_counter = size_counter - 4;
 
-			// an ikanopoieitai kapoia ap autes tis sunthikes tote uparxei lathos sta
-			// dedomena tou text arxeiou kai vgainei exception
+			// If even 1 of these conditions is true, then text file is in incorrect form
 			if (line_counter != rows || size_counter != rows * columns || E_counter != 1
 					|| ((e_x != 0) && (e_x != rows - 1) && (e_y != 0 && e_y != columns - 1))) {
 
 				throw new Exception();
-			}
-
-			// alliws epistrefei sth main
-			else {
-				return;
 			}
 		}
 
