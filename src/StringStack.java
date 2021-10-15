@@ -5,7 +5,7 @@ import java.util.NoSuchElementException;
  * Defines the methods for a Stack that handles String items
  */
 public interface StringStack <T>{
-    /**
+    	/**
 	 * @return true if the stack is empty
 	 */
 	public boolean isEmpty();
