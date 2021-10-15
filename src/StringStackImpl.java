@@ -16,7 +16,7 @@ public class StringStackImpl<T> implements StringStack<T> {
 
 	}
 
-	// If there is not top this means the stack is empty
+	// If there is no top this means the stack is empty
 
 	public boolean isEmpty() {
 		return top == null;
