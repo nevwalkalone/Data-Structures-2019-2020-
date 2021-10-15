@@ -94,8 +94,6 @@ public class StringStackImpl<T> implements StringStack<T> {
 		}
 	}
 
-	
-
 	public int size() {
 		return size;
 	}
