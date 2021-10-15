@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 
 public interface StringQueue<T> {
-    	/**
+    /**
 	 * @return true if the queue is empty
 	 */
 	public boolean isEmpty();
@@ -24,7 +24,7 @@ public interface StringQueue<T> {
 	 */
 	public T get() throws NoSuchElementException;
 
-       /**
+    /**
 	 * return without removing the oldest item of the queue
 	 * @return oldest item of the queue
 	 * @throws NoSuchElementException if the queue is empty
