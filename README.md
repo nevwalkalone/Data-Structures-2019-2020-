@@ -40,4 +40,4 @@ To run the Thiseas program:
    java Thiseas path_to_file/filename.txt
    ```
 
-   Program displays the exact path and moves from the entrance to the exit of the maze, if an exit exists. If not, an appropriate message will be printed.
+Program displays the exact path and moves from the entrance to the exit of the maze, if an exit exists. If not, an appropriate message will be printed.
