@@ -10,8 +10,8 @@ The application is a client program called **Thiseas.java** which is based on th
 
 For a full overview it is highly suggested that you read:
 
-- [Project Assignment](https://github.com/nevwalkalone/Stack-and-FIFO-Queue/blob/main/announcement-report/project-announcement.pdf), that has all the details about the data types implementation and the application.
-- [Project Report](https://github.com/nevwalkalone/Stack-and-FIFO-Queue/blob/main/announcement-report/project1-report.pdf), that contains the analysis of the Java code.
+- [Project Assignment](https://github.com/nevwalkalone/Stack-and-FIFO-Queue/blob/main/assignment-report/project1-assignment.pdf), that has all the details about the data types implementation and the application.
+- [Project Report](https://github.com/nevwalkalone/Stack-and-FIFO-Queue/blob/main/assignment-report/project1-report.pdf), that contains the analysis of the Java code.
 
 ## Dependencies
 
