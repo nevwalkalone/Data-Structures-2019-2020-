@@ -23,20 +23,20 @@ To run the Thiseas program:
 
 1. **Clone** repository and change directory to src.
 
-   ```bash
+   ```console
    git clone https://github.com/nevwalkalone/Stack-and-FIFO-Queue.git
    cd src
    ```
 
 2. **Compile** the program.
 
-   ```bash
+   ```console
    javac Thiseas.java
    ```
 
 3. **Run** the program. Entire path for the .txt file that represents the maze, must be specified. maze-example found in this repo can be used as an example of a maze.
 
-   ```bash
+   ```console
    java Thiseas path_to_file/filename.txt
    ```
 
