@@ -15,7 +15,7 @@ For a full overview it is highly suggested that you read:
 
 ## Dependencies
 
-- [Java (jdk15)](https://www.oracle.com/java/technologies/javase/jdk15-archive-downloads.html).
+- [Java (jdk13)](https://www.oracle.com/java/technologies/javase/jdk13-archive-downloads.html).
 
 ## Program Execution
 
