@@ -1,18 +1,21 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-/**
- * Defines the methods for a FIFO queue that handles String items
+/*
+ * Defines the methods for a FIFO queue. Generics were used.
  */
 
 public interface StringQueue<T> {
+
     /**
      * @return true if the queue is empty
      */
     public boolean isEmpty();
 
     /**
-     * insert a String item to the queue
+     * insert an item to the queue
+     * 
+     * @param item that will be inserted
      */
     public void put(T item);
 
@@ -45,4 +48,5 @@ public interface StringQueue<T> {
      * @return number of elements in the queue
      */
     public int size();
+
 }

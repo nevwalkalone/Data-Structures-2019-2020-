@@ -2,16 +2,20 @@ import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
 /**
- * Defines the methods for a Stack that handles String items
+ * Defines the methods for a Stack. Generics were used.
  */
+
 public interface StringStack<T> {
+
 	/**
 	 * @return true if the stack is empty
 	 */
 	public boolean isEmpty();
 
 	/**
-	 * insert a String item to the stack
+	 * insert an item to the queue
+	 * 
+	 * @param item that will be inserted
 	 */
 	public void push(T item);
 
@@ -44,4 +48,5 @@ public interface StringStack<T> {
 	 * @return the number of items currently in the stack
 	 */
 	public int size();
+
 }

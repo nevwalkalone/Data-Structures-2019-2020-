@@ -2,8 +2,8 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- * Client program that uses StringStackImpementation in order to find the exit
- * in a maze that is given as a txt file input.
+ * Client program that uses Stack Impementation in order to find the exit in a
+ * maze that is given as a txt file input.
  */
 
 public class Thiseas {
@@ -301,4 +301,5 @@ public class Thiseas {
 			System.exit(1);
 		}
 	}
+	
 }

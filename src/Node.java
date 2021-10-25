@@ -1,4 +1,4 @@
-/**
+/*
  * Class representing a Node, contains an item and a reference to the next node.
  * Generics were used.
  */
@@ -12,4 +12,5 @@ public class Node<T> {
 		this.item = item;
 		this.next = null;
 	}
+
 }
