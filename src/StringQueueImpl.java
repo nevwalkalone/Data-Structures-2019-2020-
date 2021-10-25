@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-/**
+/*
  * Class that implements the Queue Interface's methods. More comments for each
  * method can be found in StringQueue.java. Generics were used.
  */
@@ -28,7 +28,7 @@ public class StringQueueImpl<T> implements StringQueue<T> {
 		Node<T> node = new Node<>(item);
 		size++;
 
-		/**
+		/*
 		 * If the queue is empty it will be the new head and tail simultaneously because
 		 * it's the only element
 		 */
@@ -52,7 +52,7 @@ public class StringQueueImpl<T> implements StringQueue<T> {
 			throw new NoSuchElementException("Queue is Empty");
 		}
 
-		/**
+		/*
 		 * else remove the head and make the 2nd node as new head and return the old
 		 * head
 		 */

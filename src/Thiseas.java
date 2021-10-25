@@ -50,7 +50,7 @@ public class Thiseas {
 			}
 			reader.close();
 
-			/**
+			/*
 			 * Variable that holds the rows dimensions, -2 because the first 2 lines of the
 			 * table are the dimensions of the table and the coordinates of E. Will be used
 			 * in check_maze method.
@@ -79,7 +79,7 @@ public class Thiseas {
 
 			String character = "";
 
-			/**
+			/*
 			 * Creating a char table that holds all elements of the txt files, first 2 lines
 			 * are excluded.
 			 */
@@ -93,7 +93,7 @@ public class Thiseas {
 			}
 			input2.close();
 
-			/**
+			/*
 			 * Checking if E is in a different position than the one the txt file mentions
 			 */
 			if (buffer[e_x][e_y] != 'E') {
@@ -129,7 +129,7 @@ public class Thiseas {
 
 		while (true) {
 
-			/**
+			/*
 			 * Checks if a right move is possible. If it is it places a 'd' character in
 			 * these coordinates in the char table, so that we know we have already visited
 			 * it in next searches. Also this position gets placed at the top of the stack,
@@ -175,7 +175,7 @@ public class Thiseas {
 			// When no move is possible
 			else {
 
-				/**
+				/*
 				 * If we come back to the entry point, then that means we've visited all
 				 * possible points and there is no exit.
 				 */
@@ -184,7 +184,7 @@ public class Thiseas {
 					break;
 				}
 
-				/**
+				/*
 				 * If we are not at the entry point, we backtrack by removing the current top of
 				 * the stack. In the next loop we check which moves are available again.
 				 */
@@ -237,52 +237,52 @@ public class Thiseas {
 
 				size_counter++;
 
-				/**
+				/*
 				 * If we are at the first 4 characters, we check the dimensions of the maze and
 				 * the coordinates of E. If for example, a String value instead of an int value
 				 * is found, an Exception will be thrown.
 				 */
 				switch (size_counter) {
-					case 1: {
-						rows = Integer.parseInt(input.next());
-						break;
+				case 1: {
+					rows = Integer.parseInt(input.next());
+					break;
+				}
+
+				case 2: {
+					columns = Integer.parseInt(input.next());
+					break;
+				}
+
+				case 3: {
+					e_x = Integer.parseInt(input.next());
+					break;
+				}
+
+				case 4: {
+					e_y = Integer.parseInt(input.next());
+					break;
+				}
+
+				default: {
+					character = input.next();
+
+					if (character.charAt(0) == 'E') {
+						E_counter++;
 					}
 
-					case 2: {
-						columns = Integer.parseInt(input.next());
-						break;
-					}
-
-					case 3: {
-						e_x = Integer.parseInt(input.next());
-						break;
-					}
-
-					case 4: {
-						e_y = Integer.parseInt(input.next());
-						break;
-					}
-
-					default: {
-						character = input.next();
-
-						if (character.charAt(0) == 'E') {
-							E_counter++;
-						}
-
-						else {
-							/**
-							 * If the text file contains a character that is not a 1 or 0 then Throw an
-							 * Exception
-							 */
-							if (character.charAt(0) != '0' && character.charAt(0) != '1') {
-								throw new Exception();
-							}
+					else {
+						/*
+						 * If the text file contains a character that is not a 1 or 0 then Throw an
+						 * Exception
+						 */
+						if (character.charAt(0) != '0' && character.charAt(0) != '1') {
+							throw new Exception();
 						}
 					}
 				}
+				}
 			}
-			/**
+			/*
 			 * removing 4 characters (dimensions and coordinates of E), so we keep only the
 			 * size of the characters of the maze
 			 */
@@ -301,5 +301,5 @@ public class Thiseas {
 			System.exit(1);
 		}
 	}
-	
+
 }

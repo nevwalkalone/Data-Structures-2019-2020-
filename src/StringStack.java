@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-/**
+/*
  * Defines the methods for a Stack. Generics were used.
  */
 

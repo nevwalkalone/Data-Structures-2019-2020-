@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-/**
+/*
  * Class that implements the Queue Interface's methods with only one pointer.
  * More comments for each method can be found in StringQueue.java. Generics and
  * a circular linked list was used.
@@ -27,7 +27,7 @@ public class StringQueueWithOnePointer<T> implements StringQueue<T> {
 		Node<T> node = new Node<>(item);
 		size++;
 
-		/**
+		/*
 		 * If the queue is empty this node will be the new last pointer, and it will
 		 * point to its self, because it is the only element and we are using a circular
 		 * linked list
@@ -38,7 +38,7 @@ public class StringQueueWithOnePointer<T> implements StringQueue<T> {
 
 		}
 
-		/**
+		/*
 		 * else we connect the previous last node to the newly inserted node, and this
 		 * node to the first element of the queue, in order this list remains circular
 		 */
@@ -56,7 +56,7 @@ public class StringQueueWithOnePointer<T> implements StringQueue<T> {
 			throw new NoSuchElementException("Queue is empty");
 		}
 
-		/**
+		/*
 		 * If the size of queue is 1 just remove the last item, else make the previous
 		 * item as last and connect it to the first item. Return the old last item
 		 */

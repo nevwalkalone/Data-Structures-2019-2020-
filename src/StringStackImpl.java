@@ -1,7 +1,7 @@
 import java.io.PrintStream;
 import java.util.NoSuchElementException;
 
-/**
+/*
  * Class that implements the Stack Interface's methods. More comments for each
  * method can be found in StringStack.java. Generics were used.
  */
@@ -28,7 +28,7 @@ public class StringStackImpl<T> implements StringStack<T> {
 		Node<T> node = new Node<>(item);
 		size++;
 
-		/**
+		/*
 		 * If the stack is not empty, previous top must be connected to the newly
 		 * inserted node which will be the new top
 		 */
@@ -47,7 +47,7 @@ public class StringStackImpl<T> implements StringStack<T> {
 			throw new NoSuchElementException("Stack is Empty");
 		}
 
-		/**
+		/*
 		 * else remove the top and make the previous node as the new top and return the
 		 * old top
 		 */
