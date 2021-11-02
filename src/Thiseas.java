@@ -23,9 +23,9 @@ public class Thiseas {
 	}
 
 	/**
-	 * @param args The text file that represents a maze.
-	 * @throws Exception An Exception is thrown if text document is not found or is
-	 *                   in incorrect form.
+	 * @param args The text file that represents the maze.
+	 * @throws Exception is thrown if text document is not found or is in incorrect
+	 *                   form.
 	 */
 	public static void main(String[] args) throws Exception {
 
@@ -214,7 +214,7 @@ public class Thiseas {
 	 * 
 	 * @param input        An input object that will scan through the txt file
 	 * @param line_counter The total rows of the maze.
-	 * @throws Exception Throws an Exception if the maze is not in correct form.
+	 * @throws Exception is thrown if the maze is not in correct form.
 	 */
 
 	private static void check_maze(Scanner input, int line_counter) throws Exception {

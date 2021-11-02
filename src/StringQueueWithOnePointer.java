@@ -4,7 +4,7 @@ import java.util.NoSuchElementException;
 /*
  * Class that implements the Queue Interface's methods with only one pointer.
  * More comments for each method can be found in StringQueue.java. Generics and
- * a circular linked list was used.
+ * a circular linked list were used.
  */
 
 public class StringQueueWithOnePointer<T> implements StringQueue<T> {
