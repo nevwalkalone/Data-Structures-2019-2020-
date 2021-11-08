@@ -41,3 +41,7 @@ To run the Thiseas program:
    ```
 
 Program displays the exact path and moves from the entrance to the exit of the maze, if any exit exists. If not, an appropriate message will be printed.
+
+## Contributions
+
+If you want to contribute, you can always create a pull request or open an issue.
