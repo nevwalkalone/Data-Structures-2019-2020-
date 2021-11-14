@@ -21,23 +21,29 @@ For a full overview it is highly suggested that you read:
 
 To run the Thiseas program:
 
-1. **Clone** repository and change directory to src.
+1. **Clone** repository .
 
    ```console
    git clone https://github.com/nevwalkalone/Stack-and-FIFO-Queue.git
    cd src
    ```
+2. **Change** directory to src.
 
-2. **Compile** the program.
+   ```console
+   
+   cd Stack-and-FIFO-Queue\src
+   ```
+
+3. **Compile** the program.
 
    ```console
    javac Thiseas.java
    ```
 
-3. **Run** the program. Entire path for the .txt file that represents the maze, must be specified. maze-example found in this repo can be used as an example of a maze.
+4. **Run** the program. Entire path for the .txt file that represents the maze, must be specified. maze-example found in this repo can be used as an example of a maze.
 
    ```console
-   java Thiseas path_to_file/filename.txt
+   java Thiseas path_to_file\filename.txt
    ```
 
 Program displays the exact path and moves from the entrance to the exit of the maze, if any exit exists. If not, an appropriate message will be printed.
