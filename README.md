@@ -25,7 +25,6 @@ To run the Thiseas program:
 
    ```console
    git clone https://github.com/nevwalkalone/Stack-and-FIFO-Queue.git
-   cd src
    ```
 
 2. **Change** directory to src
